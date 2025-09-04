@@ -11,6 +11,12 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+
+            $table->unsignedBigInteger('area_id');
+            $table->unsignedBigInteger('training_center_id');
+
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
+            $table->foreign('training_center_id')->references('id')->on('training_centers')->onDelete('cascade');
             $table->timestamps();
         });
     }

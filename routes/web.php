@@ -18,3 +18,4 @@ Route::resource('computers', ComputerController::class);
 Route::resource('training_centers', TrainingCenterController::class);
 Route::resource('teachers', TeacherController::class);
 Route::resource('curses', CurseController::class);
+Route::resource('course_teacher', CourseTeacherController::class);
