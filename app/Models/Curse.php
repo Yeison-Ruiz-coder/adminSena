@@ -10,4 +10,23 @@ class Curse extends Model
     use HasFactory;
 
     protected $fillable = ['curse_number', 'day'];
+
+    public function apprentices(){
+        return $this->hasMany(Apprentice::class);
+    }
+
+    public function area(){
+        return $this->belongsTO(Area::class);
+    }
+
+    public function trainingCenter(){
+        return $this->belongsTO(TrainingCenter::class);
+    }
+
+    public function CourseTeacher(){
+        return $this->hasMany(CourseTeacher::class);
+    }
+
+    protected $table = 'courses';
+
 }

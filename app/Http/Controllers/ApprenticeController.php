@@ -55,4 +55,6 @@ class ApprenticeController extends Controller
         $apprentice->delete();
         return redirect()->route('apprentices.index')->with('success', 'Aprendiz eliminado correctamente');
     }
+
+
 }
